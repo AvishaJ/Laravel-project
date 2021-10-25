@@ -1,0 +1,20 @@
+php artisan make:controller newController
+php artisan make:controller --resource newController
+
+to see all route created in project in terminal ---- write---php artisan route:list
+
+php artisan------ to see all the cmds of php artisan
+php artisan make:migration create_posts_table --create="posts"----------to create new migration ot table 
+php artisan migrate:rollback---------to do changes in table created if it has no data 
+php artisan make:migration add_is_admin_column_to_posts_table --table="posts"  ==== add column in existing table  which has some data already
+
+php artisan migrate:reset ==== delete all tables 
+php artisan migrate:refresh ==== rollback all tables and migrate again  
+
+php artisan make:model Post    =====Model created successfully.
+
+//redirecting to pages 
+<h1><a href="{{route('post.edit'),$post->id}}"></a>{{$post->title}}</h1>
+// after that page redirect to somewhere
+
+ return redirect('/posts');
