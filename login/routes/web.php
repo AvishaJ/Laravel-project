@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,4 @@ Route::get('/admin/user/roles',['middleware'=>'roles'],function(){
 return "role middle ware";
 
 }); 
+Route::get('/send-email',[MailController::class,'sendEmail']);
